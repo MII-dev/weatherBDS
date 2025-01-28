@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #87CEFA, #f0f8ff);
+            color: #333;
+        }
+
+        header {
+            background: #4682B4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .current-weather {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .current-weather h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .current-weather .temperature {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .forecast {
+            margin-top: 20px;
+        }
+
+        .forecast h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .forecast-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+        }
+
+        .forecast-card {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .forecast-card h4 {
+            margin: 0;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .forecast-card .temp {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <section class="current-weather">
+            <h2>Kyiv, Ukraine</h2>
+            <div class="temperature">+5°C</div>
+            <p>Partly Cloudy</p>
+        </section>
+
+        <section class="forecast">
+            <h3>3-Day Forecast</h3>
+            <div class="forecast-cards">
+                <div class="forecast-card">
+                    <h4>Monday</h4>
+                    <div class="temp">+7°C</div>
+                    <p>Sunny</p>
+                </div>
+                <div class="forecast-card">
+                    <h4>Tuesday</h4>
+                    <div class="temp">+4°C</div>
+                    <p>Cloudy</p>
+                </div>
+                <div class="forecast-card">
+                    <h4>Wednesday</h4>
+                    <div class="temp">+6°C</div>
+                    <p>Rainy</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="API.js"></script>
+</body>
+</html>
